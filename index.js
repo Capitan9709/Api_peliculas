@@ -1,5 +1,12 @@
 window.onload = () => {
     document.getElementsByTagName("button")[0].addEventListener("click", prepararPagina);
+    
+    document.getElementById("titulo-input").addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementsByTagName("button")[0].click();
+        }
+    });
 }
 
 // cada vez que se haga scroll se ejecuta la función y saca nuevas películas
