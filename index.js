@@ -1,6 +1,7 @@
 window.onload = () => {
     document.getElementsByTagName("button")[0].addEventListener("click", prepararPagina);
 
+    // Si se pulsa enter se hace la busqueda
     document.getElementById("titulo-input").addEventListener("keyup", function(event) {
         if (event.keyCode === 13) {
             event.preventDefault();
@@ -51,7 +52,7 @@ function lanzarPeticion() {
 
         httpRequest = new XMLHttpRequest();
     
-        httpRequest.open("GET", `http://www.omdbapi.com/?apikey=61f9227e&s=${document.getElementById("titulo-input").value}&page=${page}`);
+        httpRequest.open("GET", `https://www.omdbapi.com/?apikey=61f9227e&s=${document.getElementById("titulo-input").value}&page=${page}`);
         httpRequest.onreadystatechange = trataRespuesta;
         httpRequest.send();
 
