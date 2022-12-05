@@ -8,6 +8,13 @@ window.onload = () => {
             document.getElementsByTagName("button")[0].click();
         }
     });
+
+    // boton para limpiar la busqueda
+    document.getElementsByTagName("button")[1].addEventListener("click", () => {
+        document.getElementById("titulo-input").value = "";
+        document.getElementById("contenedor").innerHTML = "";
+        page = 1;
+    });
 }
 
 // cada vez que se haga scroll se ejecuta la función y saca nuevas películas
