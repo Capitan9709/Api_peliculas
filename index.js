@@ -1,6 +1,6 @@
 window.onload = () => {
     document.getElementsByTagName("button")[0].addEventListener("click", prepararPagina);
-    
+
     document.getElementById("titulo-input").addEventListener("keyup", function(event) {
         if (event.keyCode === 13) {
             event.preventDefault();
@@ -70,6 +70,7 @@ function trataRespuesta() {
                 let div = document.createElement("div");
                 div.innerHTML = "<h2>"+respuesta.Search[i].Title+"</h2>"+"<br>";
                 div.innerHTML += `<img src="${respuesta.Search[i].Poster}">`;
+                div.innerHTML += "<h3> Año de publicacion: "+respuesta.Search[i].Year+"</h3>";
                 contenedor.appendChild(div);
                 peticionEnCurso = false;
             }

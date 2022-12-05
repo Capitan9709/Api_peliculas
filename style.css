@@ -31,6 +31,8 @@ button:hover{
     row-gap: 30px;
     column-gap: 30px;
     margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 #contenedor>div{
     text-align: center;
@@ -38,6 +40,7 @@ button:hover{
     border-radius: 10px;
     box-shadow: 3px 5px 7px black;
     transition: 1s;
+    padding: 5px;
 }
 .desactivado{
     display: none;
